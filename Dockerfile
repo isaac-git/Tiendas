@@ -8,7 +8,7 @@ RUN sudo apt-get -y update
 
 #Descargar aplicacion
 RUN sudo apt-get install -y git
-RUN sudo git clone https://github.com/lorenmanu/submodulo-lorenzo.git
+RUN sudo git clone https://github.com/lorenmanu/Tiendas.git
 
 # Instalar Python y PostgreSQL
 RUN sudo apt-get install -y python-setuptools
@@ -23,10 +23,10 @@ RUN sudo easy_install Pillow
 
 #Instalar la app
 RUN ls
-RUN cd submodulo-lorenzo/ && ls -l
-RUN cd submodulo-lorenzo/ && cat requirements.txt
-RUN cd submodulo-lorenzo/ && sudo pip install -r requirements.txt
+RUN cd Tiendas/ && ls -l
+RUN cd Tiendas/ && cat requirements.txt
+RUN cd Tiendas/ && sudo pip install -r requirements.txt
 
 
 #Migraciones
-RUN cd submodulo-lorenzo/ && python manage.py syncdb --noinput
+RUN cd Tiendas/ && python manage.py syncdb --noinput
