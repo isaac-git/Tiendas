@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lorenmanu/submodulo-lorenzo.svg?branch=master)](https://travis-ci.org/lorenmanu/submodulo-lorenzo)
+[![Build Status](https://travis-ci.org/lorenmanu/Tiendas.svg?branch=master)](https://travis-ci.org/lorenmanu/Tiendas)
 
 [![Build Status](https://snap-ci.com/lorenmanu/submodulo-lorenzo/branch/master/build_image)](https://snap-ci.com/lorenmanu/submodulo-lorenzo/branch/master)
 
