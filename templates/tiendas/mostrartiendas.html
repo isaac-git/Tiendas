@@ -1,0 +1,18 @@
+s<!DOCTYPE html>
+{% extends "tiendas/base.html" %}
+{% block zona %}
+{% if tiendas %}
+{% if user.is_authenticated %}
+<p> Visitas de la zona = {{ zona.views }} </p>
+<ul>
+	{% for tienda in tiendas %}
+	<li><a href="/tiendas/aumentarvisitatienda/{{ tienda.nombre}}/"> {{ tienda.nombre }}</a></li>
+	{% endfor %}
+</ul>
+{% else %} 
+{% endif %}
+{% else %}
+No hay tiendas
+{% endif %}
+<a href="/tiendas/add_tienda/{{ zona.nombre }}/">Añade tienda </a>
+{% endblock %}

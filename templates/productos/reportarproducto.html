@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Repotar</title>
+</head>
+<body>
+	<h1>Todos los productos</h1>
+	
+	<ul>
+		{% for producto in productos %}
+			<li><b>Nombre</b> {{producto.nombre}} </li>
+			<li><b>Pais</b> {{producto.pais}} </li>
+			<li><b>Descripcion</b> {{producto.descripcion}} </li>
+			<li><b>Foto</b> {{MEDIA_URL}}{{producto.foto}} <img src="{{MEDIA_URL}}{{producto.foto}}"></li>
+		{% endfor %}
+	</ul>
+
+	
+</body>
+</html>
