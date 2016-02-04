@@ -40,6 +40,7 @@ Además del uso de este archivo se añade una serie de archivos, los cuales se e
 Para ejecutar la aplicación de manera local, si ser desplegada en nigún **IAAS** y **PAASS**, bastará con:
 
 - Clonar el repositorio donde se localiza la aplicación:
+
 ```
 git clone https://github.com/lorenmanu/Tiendas.git
 cd Tiendas
@@ -47,6 +48,7 @@ cd Tiendas
 ```
 
 - Actualizar las base de datos:
+
 ```
 python manage.py makemigrations
 python manage.py migrate
@@ -62,11 +64,11 @@ python manage.py createsuperuser
 
 - Ejecutar la aplicación en local:
 
+
 ```
 python manage.py runserver
 
 ```
-
 ### Testeo de la aplicación
 
 Para realizar el testeo de la aplicación, es decir, la ejecución de los tests, me he servido de la funcionalidad entre otras que nos proporciona el archivo **manage.py**, en concreto se pone en la terminal dentro del directorio en el cual está el archivo:
@@ -81,7 +83,7 @@ Esta orden ejecutará los tests que indiquemos dentro de la carpeta de nuestra a
 ### Integracíon Continua
 Aquí he usado dos sistemas de integración continua, de esta manera cada vez que realice un cambio en la aplicación se comprobará su correcto funcionamiento ejecutando los tests. Los sistemas usados son:
 
-- **Travis**: estará sincronizado con nuestro repositorio, cada vez que se realice un cambio en la aplicación comprobará el correcto funcionamiento de esta.
+- **Travis**: estará sincronizado con nuestro repositorio, cada vez que se realice un cambio en la aplicación comprobará el correcto funcionamiento de esta. Para más información de como se usa
 
 - **Snap-Ci**: usado para heroku, lo veremos en el siguiente apartado.
 
@@ -95,4 +97,13 @@ Podemos ver la aplicación desplegada en el siguiente [enlace](https://myclient.
 
 He proporcionado un archivo(script) para el despliegue en heroku, puede verse [aquí](https://github.com/lorenmanu/Tiendas/blob/master/scripts/heroku_deploy.sh).
 
-Para mas información de como la he desplegado en heroku, visita el [enlace](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/heroku.md). En el anterior enlace también se explica la integración continua con snap-ci.
+Para más información de como he desplegado en heroku, visita el [enlace](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/heroku.md). En el anterior enlace también se explica la integración continua con snap-ci.
+
+### Despliegue remoto: Fabric
+Para realizar el despliegue remoto he probado [Fabric](http://www.fabfile.org/), el cual es una biblioteca de python para realizar tareas de administración por ssh. Con él he creado un entorno de pruebas en ec2, que es un servicio web que proporciona capacidad informática con tamaño modificable en la nube, para más información se puede consultar el siguiente [enlace](https://aws.amazon.com/es/ec2/).
+
+Para la creación del entorno Docker en mi máquina virtual ec2 he usado un archivo [fabfile](https://github.com/lorenmanu/Tiendas/blob/master/fabfile.py). Lo que hace este archivo se puede ver [aquí](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/fabfile.md).
+
+Para crear una instancia en **ec2**, he seguido los pasos detallados en el siguiente [archivo](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/ec2.md).
+
+El enlace mi instancia en EC2 donde se puede ver la aplicación es [este](http://ec2-52-11-219-71.us-west-2.compute.amazonaws.com).
