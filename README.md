@@ -27,3 +27,10 @@ Aquí he usado el archivo con nos proporciona Django denominado **manage.py**, e
 - Realizar tests de la aplicación: el cual lo utilizaremos para la integración continua.
 
 **Nota**: el uso de este archivo lo podremos ver fundamentalmente en **snap-ci** y en **travis**.
+
+Además del uso de este archivo se añade una serie de archivos, los cuales se encuentran en la carpeta **scripts**, y son:
+
+- [docker_install_and_run](https://github.com/lorenmanu/Tiendas/blob/master/scripts/docker_install_and_run.sh): descarga el docker de la aplicación y lo ejecuta.
+- [heroku_desploy.sh](https://github.com/lorenmanu/Tiendas/blob/master/scripts/heroku_deploy.sh): despliega la aplicación usando como **IAAS** heroku.
+- [run_app.sh](https://github.com/lorenmanu/Tiendas/blob/master/scripts/run_app.sh): ejecuta nuestra aplicación en el puerto **80**:
+- [herramientas_ec2](https://github.com/lorenmanu/Tiendas/blob/master/scripts/herramientas_ec2.sh): instala las herramientas necesarias para que nuestra aplicación se despliegue en ec2 usando **vagrant** y **ansible**
