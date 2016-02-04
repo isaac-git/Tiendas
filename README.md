@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/lorenmanu/Tiendas.svg?branch=master)](https://travis-ci.org/lorenmanu/Tiendas)
 
-[![Build Status](https://snap-ci.com/lorenmanu/submodulo-lorenzo/branch/master/build_image)](https://snap-ci.com/lorenmanu/submodulo-lorenzo/branch/master)
+[![Build Status](https://snap-ci.com/lorenmanu/Tiendas/branch/master/build_image)](https://snap-ci.com/lorenmanu/Tiendas/branch/master)
 
 [![Heroku](https://www.herokucdn.com/deploy/button.png)](https://ejemplodeploy.herokuapp.com/tiendas/login/?next=/tiendas/)
 
@@ -107,3 +107,6 @@ Para la creación del entorno Docker en mi máquina virtual ec2 he usado un arch
 Para crear una instancia en **ec2**, he seguido los pasos detallados en el siguiente [archivo](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/ec2.md).
 
 El enlace mi instancia en EC2 donde se puede ver la aplicación es [este](http://ec2-52-11-219-71.us-west-2.compute.amazonaws.com).
+
+### Docker Hub
+Docker Hub es un servicio en la nube que nos permite construir y enviar aplicaciones o servicios mediante contenedores. Y además nos permitirá también su automatización.

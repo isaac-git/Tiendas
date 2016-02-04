@@ -9,7 +9,7 @@ sudo pip install fabric
 
 ```
 
-- ** Segundo **: Localizar nuestro archivo con la clave privada proporcionada por Amazon. Este archivo tendrá extensión **.pem** y Amazon nos permitirá su descarga cuando [creemos la instancia](https://github.com/lorenmanu/submodulo-lorenzo/blob/master/documentacion/ec2.md). Copiaremos la ruta a dicho archivo y lo añadiremos a la conexíon **ssh** con el siguiente comando:
+- ** Segundo **: Localizar nuestro archivo con la clave privada proporcionada por Amazon. Este archivo tendrá extensión **.pem** y Amazon nos permitirá su descarga cuando [creemos la instancia](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/ec2.md). Copiaremos la ruta a dicho archivo y lo añadiremos a la conexíon **ssh** con el siguiente comando:
 
 ```
 ssh-add "ruta archivo"
@@ -53,7 +53,7 @@ Las operaciones que permite realizar mi **fabfile.py** son:
 - Ejecución de la aplicación:
 ![img7](https://www.dropbox.com/s/insyi6vmy5vsuzj/img7_iv.png?dl=1)
 
-**Nota**: como se puede ver en la anterior imagen se ha ejecutado la aplicación y accedido a ella por el navegador desde el DNS que nos da Amazon. Esto es posible si configuramos las reglas correctamente, se detalla en [**documentacion/ec2.md**](https://github.com/lorenmanu/submodulo-lorenzo/blob/master/documentacion/ec2.md).
+**Nota**: como se puede ver en la anterior imagen se ha ejecutado la aplicación y accedido a ella por el navegador desde el DNS que nos da Amazon. Esto es posible si configuramos las reglas correctamente, se detalla en [**documentacion/ec2.md**](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/ec2.md).
 
 
 ### Despliegue con docker.

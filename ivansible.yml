@@ -8,10 +8,10 @@
     apt: name=python-dev state=present
     apt: name=git state=present
   - name: Obtener aplicacion de git
-    command: git clone https://github.com/lorenmanu/submodulo-lorenzo.git
+    command: git clone https://github.com/lorenmanu/Tiendas.git
   - name: Permisos de ejecucion
-    command: chmod -R +x submodulo-lorenzo
+    command: chmod -R +x Tiendas
   - name: Instalar requisitos
-    command: sudo pip install -r submodulo-lorenzo/requirements.txt
+    command: sudo pip install -r Tiendas/requirements.txt
   - name: ejecutar
-    command: nohup sudo python submodulo-lorenzo/manage.py runserver 0.0.0.0:80
+    command: nohup sudo python Tiendas/manage.py runserver 0.0.0.0:80

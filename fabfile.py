@@ -10,23 +10,23 @@ def informacion_host():
 def get_aplicacion():
 	run('sudo apt-get update')
 	run('sudo apt-get install -y git')
-	run('sudo git clone https://github.com/lorenmanu/submodulo-lorenzo.git')
+	run('sudo git clone https://github.com/lorenmanu/Tiendas.git')
 
 #Instalacion necesaria para host virgen
 def instalacion():
-	run('cd submodulo-lorenzo/ && sudo sh install.sh')
+	run('cd Tiendas/ && sudo sh install.sh')
 
 #Sincronizacion de la aplicacion y la base de datos
 def sincronizacion():
-	run('cd submodulo-lorenzo/ && python manage.py syncdb --noinput')
+	run('cd Tiendas/ && python manage.py syncdb --noinput')
 
 #Ejecucion de test
 def testeo():
-	run('cd submodulo-lorenzo/ && make test')
+	run('cd Tiendas/ && make test')
 
 #Ejecucion de la aplicacion
 def ejecucion():
-	run('cd submodulo-lorenzo/ && make run')
+	run('cd Tiendas/ && make run')
 
 #peticion
 def peticion():
@@ -39,8 +39,8 @@ def peticion():
 def getDocker():
 	run('sudo apt-get update')
 	run('sudo apt-get install -y docker.io')
-	run('sudo docker pull lorenmanu/submodulo-lorenzo')
+	run('sudo docker pull lorenmanu/Tiendas')
 
 #Ejecucion de docker
 def runDocker():
-	run('sudo docker run -p 80:80 -i -t lorenmanu/submodulo-lorenzo')
+	run('sudo docker run -p 80:80 -i -t lorenmanu/Tiendas')

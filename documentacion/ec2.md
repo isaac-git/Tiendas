@@ -45,4 +45,4 @@ Esto último lo tenemos automatizado...
 
 ### ¿Cómo se hace lo anterior automatizado ?
 
-En la anterior explicación hemos visto como hacer que nuestra aplicación de servicio de manera manual. Este proceso se puede automatizar usando la biblioteca de python fabric. Esta automatización puede hacer que nuestra instancia en Amazon de servicio desde la misma máquina( similar al servicio anterior) o desde un docker. Se puede ver como hacerlo en el siguiente [archivo](https://github.com/lorenmanu/submodulo-lorenzo/blob/master/documentacion/fabfile.md).
+En la anterior explicación hemos visto como hacer que nuestra aplicación de servicio de manera manual. Este proceso se puede automatizar usando la biblioteca de python fabric. Esta automatización puede hacer que nuestra instancia en Amazon de servicio desde la misma máquina( similar al servicio anterior) o desde un docker. Se puede ver como hacerlo en el siguiente [archivo](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/fabfile.md).
