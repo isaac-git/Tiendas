@@ -76,4 +76,23 @@ sudo python manage.py test
 
 ```
 
-Esta orden ejecutará los tests que indiquemos dentro de la carpeta de nuestra aplicación, en concreto en **apps/tiendas/tests.py**.
+Esta orden ejecutará los tests que indiquemos dentro de la carpeta de nuestra aplicación, en concreto en **apps/tiendas/tests.py**. Pueden verse [aquí](https://github.com/lorenmanu/Tiendas/blob/master/apps/tiendas/tests.py).
+
+### Integracíon Continua
+Aquí he usado dos sistemas de integración continua, de esta manera cada vez que realice un cambio en la aplicación se comprobará su correcto funcionamiento ejecutando los tests. Los sistemas usados son:
+
+- **Travis**: estará sincronizado con nuestro repositorio, cada vez que se realice un cambio en la aplicación comprobará el correcto funcionamiento de esta.
+
+- **Snap-Ci**: usado para heroku, lo veremos en el siguiente apartado.
+
+Los tests que se ejecutarán son los mencionados en el apartado **Testeo de la aplicación**.
+
+### Despliegue en un Paas Heroku
+
+Aquí he decidido usar Heroku, el cual se caracteriza por su fácil sincronización con github y por su caracter gratuito.
+
+Podemos ver la aplicación desplegada en el siguiente [enlace](https://myclient.herokuapp.com/).
+
+He proporcionado un archivo(script) para el despliegue en heroku, puede verse [aquí](https://github.com/lorenmanu/Tiendas/blob/master/scripts/heroku_deploy.sh).
+
+Para mas información de como la he desplegado en heroku, visita el [enlace](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/heroku.md). En el anterior enlace también se explica la integración continua con snap-ci.
