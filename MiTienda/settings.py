@@ -2,7 +2,7 @@
 #encoding:utf-8
 import os
 import dj_database_url
-
+import django
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
