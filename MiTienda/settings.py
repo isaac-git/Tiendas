@@ -118,7 +118,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    'django.core.management',
     'apps.tiendas',
     'easy_maps',
     'rest_framework',
