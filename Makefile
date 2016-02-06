@@ -10,8 +10,7 @@ install:
 	sudo python setup.py install
 
 database:
-	sudo python manage.py makemigrations
-	sudo python manage.py migrate
+	sudo python manage.py syncdb
 
 test:
 	sudo python manage.py test
