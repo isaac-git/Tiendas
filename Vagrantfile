@@ -16,8 +16,8 @@ Vagrant.configure('2') do |config|
     end
 
     config.vm.provider :aws do |aws, override|
-        aws.access_key_id = "AKIAIETD7ZLOKLKOBHEQ"
-        aws.secret_access_key = "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"
+        aws.access_key_id = ""
+        aws.secret_access_key = ""
         aws.keypair_name = "prueba"
         aws.ami = "ami-5189a661"
         aws.region = "us-west-2"
