@@ -1,4 +1,4 @@
-Django==1.7
+Django==1.8
 argparse==1.2.1
 django-appconf==1.0.1
 django-classy-tags==0.6.2
