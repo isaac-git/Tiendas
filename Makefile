@@ -6,13 +6,13 @@ clean:
 	- find . -name '*.pyc' -exec rm {} \;
 
 install:
-	 sudo pip install -r requirements.txt
+	pip install -r requirements.txt
 
 test:
-	sudo python3 manage.py test
+	python3 manage.py test
 
 run:
-	sudo python3 manage.py runserver 0.0.0.0:80
+	python3 manage.py runserver 0.0.0.0:80
 
 doc:
 	epydoc --html MiTienda/*.py
