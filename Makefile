@@ -4,15 +4,19 @@
 clean:
 	- rm -rf *~*
 	- find . -name '*.pyc' -exec rm {} \;
+	- find . -name '.DS_Store' -exec rm {} \;
 
 install:
-	pip install -r requirements.txt
+	sudo python setup.py install
+
+database:
+	sudo python manage.py syncdb
 
 test:
-	python3 manage.py test
+	sudo python manage.py test
 
 run:
-	python3 manage.py runserver 0.0.0.0:80
+	sudo python manage.py runserver
 
 doc:
 	epydoc --html MiTienda/*.py
