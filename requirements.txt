@@ -11,11 +11,11 @@ futures==3.0.3
 gunicorn==19.3.0
 psycopg2==2.4.5
 six==1.10.0
-wsgiref==0.1.2
 dj-database-url==0.3.0
 dj-static==0.0.6
 Pillow==3.0.0
 py2app==0.7.3
+django-registration-redux==1.2
 python-dateutil==1.5
 python-openid==2.2.5
 requests==2.8.1
