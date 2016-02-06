@@ -118,6 +118,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'django.core.management',
     'apps.tiendas',
     'easy_maps',
     'rest_framework',
@@ -192,4 +193,3 @@ USE_L10N = True
 USE_TZ = True
 
 LOGIN_URL = '/tiendas/login/'
-
