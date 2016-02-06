@@ -6,7 +6,7 @@ clean:
 	- find . -name '*.pyc' -exec rm {} \;
 
 install:
-	 sudo pip3 install -r requirements.txt
+	 sudo pip install -r requirements.txt
 
 test:
 	sudo python3 manage.py test
