@@ -110,3 +110,16 @@ El enlace mi instancia en EC2 donde se puede ver la aplicación es [este](http:/
 
 ### Docker Hub
 Docker Hub es un servicio en la nube que nos permite construir y enviar aplicaciones o servicios mediante contenedores. Y además nos permitirá también su automatización.
+
+Para su automatización será necesario un archivo Dockerfile, el mio puede verse [aquí](https://github.com/lorenmanu/Tiendas/blob/master/Dockerfile).
+
+Los pasos de como usar **Docker Hub** se detallan en el siguiente [archivo](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/docker.md).
+
+Se ofrece un archivo(script) para laa creación del docker en el ordenador donde se ejecute, puede verse [aquí](https://github.com/lorenmanu/Tiendas/blob/master/scripts/docker_install_and_run.sh).
+
+**Nota**: si ejecutamos archivo(script), no olvidar dirigirse al directorio **Tiendas** e introducir en la terminal **make run** para ejecutar la aplicación. Basicamente lo que hace make run es:
+
+```
+sudo python manage.py runserver 0.0.0.0:80
+
+```
