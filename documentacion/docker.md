@@ -16,7 +16,7 @@ Después se despliega nuestra aplicación en docker-hub, para ello se sigue los 
 
 - Construcción de la imagen:
 
-![img3](https://www.dropbox.com/s/no7qfjlxqhy43ot/img3.png?dl=3)
+![img3](https://www.dropbox.com/s/no7qfjlxqhy43ot/img3.png?dl=1)
 
 **Nota**: cada vez que realicemos un **git push** en el repositorio se integrará de manera automática en **dockerhub**.
 

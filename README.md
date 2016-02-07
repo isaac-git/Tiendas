@@ -111,16 +111,18 @@ Para la creación del entorno Docker en mi máquina virtual ec2 he usado un arch
 
 Para crear una instancia en **ec2**, he seguido los pasos detallados en el siguiente [archivo](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/ec2.md).
 
-El enlace mi instancia en EC2 donde se puede ver la aplicación es [este](http://ec2-52-11-219-71.us-west-2.compute.amazonaws.com).
+El enlace mi instancia en EC2 donde se puede ver la aplicación es [este](ec2-52-34-212-176.us-west-2.compute.amazonaws.com).
 
 ### Docker Hub
 Docker Hub es un servicio en la nube que nos permite construir y enviar aplicaciones o servicios mediante contenedores. Y además nos permitirá también su automatización.
 
 Para su automatización será necesario un archivo Dockerfile, el mio puede verse [aquí](https://github.com/lorenmanu/Tiendas/blob/master/Dockerfile).
 
+La imagen del docker se puede ver [aquí](https://hub.docker.com/r/lorenmanu/tiendas/).
+
 Los pasos de como usar **Docker Hub** se detallan en el siguiente [archivo](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/docker.md).
 
-Se ofrece un archivo(script) para laa creación del docker en el ordenador donde se ejecute, puede verse [aquí](https://github.com/lorenmanu/Tiendas/blob/master/scripts/docker_install_and_run.sh).
+Se ofrece un archivo(script) para la creación del docker en el ordenador donde se ejecute, puede verse [aquí](https://github.com/lorenmanu/Tiendas/blob/master/scripts/docker_install_and_run.sh).
 
 **Nota**: si ejecutamos archivo(script), no olvidar dirigirse al directorio **Tiendas** e introducir en la terminal **make run** para ejecutar la aplicación. Basicamente lo que hace make run es:
 
