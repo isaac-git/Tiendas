@@ -64,21 +64,16 @@ aws ec2 create-key-pair --key-name my-key-pair
 
 ![img9](https://www.dropbox.com/s/43ebfj2a5385b7e/img9.png?dl=1)
 
-- Creamos un **Security Groups**, el cual usuará para atender peticiones. El apartado de la documentación oficial de Amazon de como crearlo se puede ver [aquí](http://docs.aws.amazon.com/es_es/cli/latest/userguide/cli-ec2-sg.html). Yo he realizado lo siguiente:
+- Creamos un **Security Groups**, el cual usuará para atender peticiones. El apartado de la documentación oficial de Amazon de como crearlo se puede ver [aquí](http://docs.aws.amazon.com/es_es/cli/latest/userguide/cli-ec2-sg.html). También hay que añadirle una serie de reglas para indicarle los puertos por los cuales va a atender(esta en el mismo apartado de la documentación oficial), en concreto yo he realizado los siguiente:
 
-```
-aws ec2 create-security-group --group-name my-sg --description "My security group"
-
-```
 
 ![img8](https://www.dropbox.com/s/1haw0v9opo6wfmx/img8.png?dl=1)
 
-**Nota**: nos da un error, esto se debe a que lo hemos creado ya.
 
 
 - Una vez realizado esto, modificamos nuestro **Vangranfile**, tiendo en cuenta:
 
-- Los datos del archivo **.csv** anterior.:
+ - Los datos del archivo **.csv** anterior.:
 
 ```
 aws.access_key_id
@@ -87,14 +82,14 @@ aws.secret_access_key
 
 ```
 
-- Localización de nuestro sistema operativo:
+ - Localización de nuestro sistema operativo:
 
 ```
 aws.ami
 
 ```
 
-- Regíon de nuestra instancia:
+ - Regíon de nuestra instancia:
 
 ```
 aws.region
@@ -103,7 +98,7 @@ aws.region
 
 ```
 
-- El nombre de nuestro archivo **.pem**:
+ - El nombre de nuestro archivo **.pem**:
 
 ```
 
@@ -111,20 +106,20 @@ keypair_name
 
 ```
 
-- El **security_groups** que se encargará de atender nuestras peticiones:
+ - El **security_groups** que se encargará de atender nuestras peticiones:
 
 ```
 security_groups
 
 ```
 
-- El tipo de nuestra instancia, ** importante mirar las que son gratis o no**.
+ - El tipo de nuestra instancia, ** importante mirar las que son gratis o no**.
 
 ```
 instance_type
 
 ```
-- El nombre del usuario de nuestra máquina:
+ - El nombre del usuario de nuestra máquina:
 
 ```
 override.ssh.username
@@ -134,7 +129,7 @@ override.ssh.username
 **Nota**: Usuario por el cual se conectará por ssh, por defecto es **ubuntu** en EC2.
 
 
-- Por lo que podemos ver nuestro VangrantFile tendrá la siguiente estructura:
+ - Por lo que podemos ver nuestro VangrantFile tendrá la siguiente estructura:
 
 
 ```
@@ -185,7 +180,7 @@ end
 Si se tiene alguna duda, se puede consultar el siguiente [enlacen](https://github.com/mitchellh/vagrant-aws).
 
 
-- Como podemos ver, para desplegar la aplicación estamos usando **ansible**, este se encarga de instalar todos los paquetes necesarios, descargar nuestra aplicación de nuestro repositorio y ejecutarla, concretamente mi archivo **.yml** es el siguiente:
+ - Como podemos ver, para desplegar la aplicación estamos usando **ansible**, este se encarga de instalar todos los paquetes necesarios, descargar nuestra aplicación de nuestro repositorio y ejecutarla, concretamente mi archivo **.yml** es el siguiente:
 
 ```
 - hosts: default
@@ -225,7 +220,7 @@ Si se tiene alguna duda, se puede consultar el siguiente [enlacen](https://githu
 
 ```
 
-- Ya solo nos queda desplegar nuestra aplicación, para ello pondremos en nuestra terminal en el directorio donde está el **Vagrantfile**
+ - Ya solo nos queda desplegar nuestra aplicación, para ello pondremos en nuestra terminal en el directorio donde está el **Vagrantfile**
 
 ```
 
