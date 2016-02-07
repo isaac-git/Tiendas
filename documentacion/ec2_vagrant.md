@@ -62,7 +62,7 @@ aws ec2 create-key-pair --key-name my-key-pair
 
 ```
 
-![img21](https://www.dropbox.com/s/d4ebg0arvvcxnfc/img21.png?dl=1)
+![img9](https://www.dropbox.com/s/43ebfj2a5385b7e/img9.png?dl=1)
 
 - Creamos un **Security Groups**, el cual usuará para atender peticiones. El apartado de la documentación oficial de Amazon de como crearlo se puede ver [aquí](http://docs.aws.amazon.com/es_es/cli/latest/userguide/cli-ec2-sg.html). Yo he realizado lo siguiente:
 
@@ -71,7 +71,7 @@ aws ec2 create-security-group --group-name my-sg --description "My security grou
 
 ```
 
-![img22](https://www.dropbox.com/s/fth56hgylgx4kla/img22.png?dl=1)
+![img8](https://www.dropbox.com/s/1haw0v9opo6wfmx/img8.png?dl=1)
 
 **Nota**: nos da un error, esto se debe a que lo hemos creado ya.
 
@@ -245,9 +245,9 @@ vagrant up --provider=aws
 
 En el apartado **Security Groups** hay que tener en cuenta las peticiones que se van atender y las que se enviará, en concreto para mi aplicación permitiré que se pueda conectar a ella usando **ssh** y atender petiiones por internet, por lo que en el en la parte **Inbound** tendrá:
 
-![img6](img6)
+![img6](https://www.dropbox.com/s/lyu7nn1cg1326cr/img6.png?dl=1)
 
-![img7](img7)
+![img7](https://www.dropbox.com/s/5df40rptlt296ic/img7.png?dl=1)
 
 La creación del **Security Groups** ya la hemos visto antes, para añadirle reglas de los puertos que va a antender y por donde los va a dirigir la podemos hacer de la misma manera con la cual la hemos creado, usando **Command Line Interface ==> CLI**.
 
