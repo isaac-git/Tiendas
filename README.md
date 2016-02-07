@@ -18,7 +18,7 @@ El proyecto se ha realizado usando Django, impartido en la asignatura de Desarro
 
 Se encuentra inscrito en el [concurso de software libre](http://osl.ugr.es/bases-de-los-premios-a-proyectos-libres-de-la-ugr/).
 
-img[10](https://www.dropbox.com/s/ex2n0hmnk1ci7bb/img10.png?dl=1)
+![img10](https://www.dropbox.com/s/ex2n0hmnk1ci7bb/img10.png?dl=1)
 
 ### Infraestructura en CLOUD
 
