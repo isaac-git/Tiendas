@@ -55,14 +55,12 @@ secret_access_key
 - **region**: aquí ponemos la región en la cúal estará nuestra instancia, en mi caso **us-west-2**.
 - **text_format**: aquí le di a **enter**, no es relevante de momento.
 
-- Una vez especificado **Command Line Interface**, configuramos la conexión ssh con nuestra instacia, la cual crearemos en el Vagrantfile, para ello deberemos crear un archivo **.pem**. La documentación oficial de Amazon nos explica como realizarlo, concretamente [aquí](http://docs.aws.amazon.com/es_es/cli/latest/userguide/cli-using-param.html). En mi caso me ha valido con seguir la siguiente sintaxis:
+- Una vez especificado **Command Line Interface**, configuramos la conexión ssh con nuestra instacia, la cual crearemos en el Vagrantfile, para ello deberemos crear un archivo **.pem**. La documentación oficial de Amazon nos explica como realizarlo, concretamente [aquí](http://docs.aws.amazon.com/es_es/cli/latest/userguide/cli-using-param.html). En mi caso me ha valido con seguir la siguiente sintaxis en la terminal:
 
 ```
-aws ec2 create-key-pair --key-name my-key-pair
+aws ec2 create-key-pair --key-name my-key-pair --query 'KeyMaterial' --output text > my-key-pair.pem
 
 ```
-
-![img9](https://www.dropbox.com/s/43ebfj2a5385b7e/img9.png?dl=1)
 
 - Creamos un **Security Groups**, el cual usuará para atender peticiones. El apartado de la documentación oficial de Amazon de como crearlo se puede ver [aquí](http://docs.aws.amazon.com/es_es/cli/latest/userguide/cli-ec2-sg.html). También hay que añadirle una serie de reglas para indicarle los puertos por los cuales va a atender(esta en el mismo apartado de la documentación oficial), en concreto yo he realizado los siguiente:
 
@@ -228,7 +226,7 @@ vagrant up --provider=aws
 
 ```
 
-**Nota** en **--provider** estamos indicando el proveedor, en mi caso Amazon, si fuera azure deberíamos poner **azure**.
+**Nota**: en **--provider** estamos indicando el proveedor, en mi caso Amazon, si fuera azure deberíamos poner **azure**.
 
 
 - Finalmente nuestra aplicación estará desplegada:

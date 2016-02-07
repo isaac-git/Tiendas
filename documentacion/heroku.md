@@ -115,7 +115,7 @@ También cabe destacar que hemos usado **snap-ci**. Snap-ci me permitirá sincro
 - Ejecución de los tests.
 - Despliegue.
 
-![img5](img5)
+![img5](https://www.dropbox.com/s/btqs6ub1j3uacqd/img5.png?dl=1)
 
 
 

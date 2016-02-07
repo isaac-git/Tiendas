@@ -12,11 +12,11 @@ Después se despliega nuestra aplicación en docker-hub, para ello se sigue los 
 
 - El repositorio enlazado:
 
-![img2](img2)
+![img2](https://www.dropbox.com/s/f1wgql8u3yeopga/img2.png?dl=1)
 
 - Construcción de la imagen:
 
-![img3](img3)
+![img3](https://www.dropbox.com/s/no7qfjlxqhy43ot/img3.png?dl=3)
 
 **Nota**: cada vez que realicemos un **git push** en el repositorio se integrará de manera automática en **dockerhub**.
 
@@ -56,4 +56,4 @@ python manage.py runserver 0.0.0.0:1111
 
 Cuando hagamos esto, para ver la aplicación ejecutada desde el navegador anfitrión deberemos poner la **IP** del docker:
 
-![img4](img4)
+![img4](https://www.dropbox.com/s/3ff17lnfuf1977e/img4.png?dl=1)

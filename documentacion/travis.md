@@ -10,4 +10,4 @@ Lo primero que necesitaremos para usar travis será:
 
 En la siguiente imagen mostramos la integración continua realizada con **travis**.
 
-![img1](img1)
+![img1](https://www.dropbox.com/s/o8sii2jnsu3yinw/img1.png?dl=1)
