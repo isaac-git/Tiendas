@@ -4,7 +4,7 @@
 
 [![Heroku](https://www.herokucdn.com/deploy/button.png)](https://ejemplodeploy.herokuapp.com/tiendas/login/?next=/tiendas/)
 
-[![EC2](https://www.dropbox.com/s/st4etj28pyu11lb/aws-ec2_logo_small.jpg?dl=1)](http://ec2-52-11-219-71.us-west-2.compute.amazonaws.com)
+[![EC2](https://www.dropbox.com/s/st4etj28pyu11lb/aws-ec2_logo_small.jpg?dl=1)](http://ec2-52-34-212-176.us-west-2.compute.amazonaws.com/tiendas/login/?next=/tiendas/)
 
 
 ## **Proyecto de IV(infraestructura Virtual) junto con DAI(DESARROLLO DE APLICACIONES DE INTERNET** ##
@@ -111,7 +111,7 @@ Para la creación del entorno Docker en mi máquina virtual ec2 he usado un arch
 
 Para crear una instancia en **ec2**, he seguido los pasos detallados en el siguiente [archivo](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/ec2.md).
 
-El enlace mi instancia en EC2 donde se puede ver la aplicación es [este](ec2-52-34-212-176.us-west-2.compute.amazonaws.com).
+El enlace mi instancia en EC2 donde se puede ver la aplicación es [este](http://ec2-52-34-212-176.us-west-2.compute.amazonaws.com/tiendas/login/?next=/tiendas/).
 
 ### Docker Hub
 Docker Hub es un servicio en la nube que nos permite construir y enviar aplicaciones o servicios mediante contenedores. Y además nos permitirá también su automatización.
@@ -134,3 +134,5 @@ sudo python manage.py runserver 0.0.0.0:80
 ### Despliegue de IAAS:EC2
 
 He probado como **IAAS** en el despligue de la aplicación **EC2**. También la he desplegado usando **FABRIC** o manualmente(es decir, sin usar herramientas de automatización), como se puede ver anteriormente. En este caso para el despliegue uso **Vagrant** y **Asinble**. Para más información de como se ha realizado se puede consultar el siguiente [archivo](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/ec2_vagrant.md).
+
+El enlace de mi aplicación desplegada se puede ver [aquí](http://ec2-52-34-212-176.us-west-2.compute.amazonaws.com/tiendas/login/?next=/tiendas/).

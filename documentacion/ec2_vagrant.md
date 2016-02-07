@@ -14,7 +14,7 @@ Para poder tener **COMMAND LINE INTERFACE** en nuestro ordenador para realizar t
 
 - Instalar el cliente de **Command Line Interface** de Amazon, el cual me permitirá realizar tareas de gestión de mi perfil de usuario. Se puede consultar la documentación oficial, concretamente en el [apartado](http://docs.aws.amazon.com/es_es/cli/latest/userguide/installing.html).
 
-- Una vez instalado en nuestro ordenador, procederemos a configurarlo, para ello debemos ponemos en la terminal:
+- Una vez instalado en nuestro ordenador, procederemos a configurarlo, para ello debemos poner en la terminal:
 
 ```
 aws configure
