@@ -306,6 +306,7 @@ sudo ACCESS_KEY_ID="valor" SECRET_ACCESS_KEY="valor" PRIVATE_KEY_PATH="valor" PR
 He proporcionado un archivo que nos permite descargarnos la aplicación y desplegarla en la carpeta **scritps**, en concreto se puede ver [aquí](https://github.com/lorenmanu/Tiendas/blob/master/scripts/deploy_EC2.sh). Para ejecutarlo se debería poner en la terminal lo siguiente(dentro del directorio donde este el archivo):
 
 ```
+
  sudo ACCESS_KEY_ID="valor" SECRET_ACCESS_KEY="valor" PRIVATE_KEY_PATH="valor" PRIVATE_KEY_NAME="valor" SECURITY-GROUPS="valor" ./desploy_EC2.sh
 
 ```
@@ -334,6 +335,7 @@ ENV['var']
 
 ----------
 
+
 ### Referencias
 
 
@@ -349,3 +351,6 @@ ENV['var']
 
 - Uso de **CLI**: documentación oficial de Amazon.
     - [ENLACE](http://docs.aws.amazon.com/cli/latest/reference/ec2/).
+
+- Conocimientos básicos de Vagrant, sobre todo **la primera parte anteriormente mencionada**.
+    - [Enlace](https://geekytheory.com/tutorial-vagrant-1-que-es-y-como-usarlo/).
