@@ -126,22 +126,4 @@ sudo python manage.py runserver 0.0.0.0:80
 
 ### Despliegue de IAAS:EC2
 
-He probado como **IAAS** en el despligue de la aplicación **EC2**. También la he desplegado usando **FABRIC** o manualmente(es decir, sin usar herramientas de automatización), como se puede ver anteriormente. En este caso para el despliegue uso **Vagrant** y **Asinble**. He proporcionado un archivo de despliegue que se encuentra en la carpeta **scritps**, se puede ver [aquí](https://github.com/lorenmanu/Tiendas/blob/master/scripts/desploy_EC2.sh). Lo que hace concretamente este archivo es:
-
-- Clonar nuestro repositorio:
-
-```
-git clone https://github.com/lorenmanu/Tiendas.git
-
-```
-
-- Meterse dentro de la carpeta donde se encuentra el **Vagrantfile** e **iv.yml**, necesarios para el despliegue.
-
-- Ejecutar el archivo **create_and_run.sh**, el cual se encarga de desplegar la aplicación haciendo uso de los dos archivos anteriormente mecionados. Su contenido es:
-
-```
-vagrant up --provider=aws
-
-```
-
-**Nota**: para el despleigue de la aplicación necesitaremos antes introducir una serie de credenciales que nos pedirá **Amazon**. Como se crean dichos credenciales y se introducen se explica en el siguiente [archivo](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/ec2_vagrant.md).
+He probado como **IAAS** en el despligue de la aplicación **EC2**. También la he desplegado usando **FABRIC** o manualmente(es decir, sin usar herramientas de automatización), como se puede ver anteriormente. En este caso para el despliegue uso **Vagrant** y **Asinble**. Para más información de como se ha realizado se puede consultar el siguiente [archivo](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/ec2_vagrant.md).

@@ -1,6 +1,13 @@
 ### Explicación del proceso del despliegue de la aplicación en IAAS EC2 usando VAGRANT y ANSIBLE
 
-----------
+---------
+### Instalación de herramientas
+---------
+
+Antes de nada se debera instalar las herramientas necesarias para poder trabajar, se ha proporcionado un archivo que permite realizarlo. Se ubica en la carpeta **scrtips** del repositorio, concretamente se puede ver [aqui](https://github.com/lorenmanu/Tiendas/blob/master/scripts/herramientas_ec2.sh). Lo que hace se puede ver en el propio archivo, para ello se lanza mensajes explicativos mediante  **echo**.
+
+
+---------
 ### Configuración de COMMAND LINE INTERFACE (CLI)
 ----------
 Para poder tener **COMMAND LINE INTERFACE** en nuestro ordenador para realizar tareas de administración de nuestro perfil( creación de **Security Groups**, **archivos .pem** para conexción ssh con nuestra instancia...) deberemos seguir los siguientes pasos:
@@ -19,7 +26,7 @@ Este comando nos pedirá que rellenemos una serie de primitivas, la cual permiti
 
 De la siguiente imagen, pasamos a mostrar como rellenar los campos que nos piden el anterior comando:
 
-- Nos dirigimos a nuestro perfil de Amazon( lo que viene siendo loguearse como en cualquier plataforma). Una vez dentro seleccionamos a nuestro nombre de perfil y le damos al apartado **Security Credentials**.
+- Nos dirigimos a nuestro perfil de Amazon( lo que viene siendo loguearse como en cualquier plataforma). Una vez dentro seleccionamos nuestro nombre de perfil y le damos al apartado **Security Credentials**.
 
 ![img15](https://www.dropbox.com/s/gygkl6oneu1hwrg/img15.png?dl=1)
 
@@ -31,7 +38,7 @@ De la siguiente imagen, pasamos a mostrar como rellenar los campos que nos piden
 
 ![img17](https://www.dropbox.com/s/jc09db3cn307ggn/img17.png?dl=1)
 
-- Una vez dada nos pedirá que rellenemos una seria de campos:
+- Una vez dado nos pedirá que rellenemos una seria de campos:
 
 ![img18](https://www.dropbox.com/s/tao3m85ray0x8as/img18.png?dl=1)
 
@@ -140,6 +147,13 @@ keypair_name
 
 ```
 
+- La ruta a nuestro archivo **.pem**:
+```
+
+private_key_path
+
+``
+
  - El **security_groups** que se encargará de atender nuestras peticiones:
 
 ```
@@ -211,6 +225,14 @@ end
 
 ```
 
+En el se diferencian tres partes:
+
+- Primera: indica características del box de Vagrant y de la máquina virtual( especificaciones de la red, asignación del nombre de la máquina(en mi caso localhost)...).
+
+- Segunda: la hemos explicado antes, son las características del provider de **EC2**.
+
+- Tercera: es la parte de provisión, es decir, se indica que se quiere usar **ansible** y el archivo donde se quiere usar( en mi caso **iv.yml**).
+
 Si se tiene alguna duda, se puede consultar el siguiente [enlacen](https://github.com/mitchellh/vagrant-aws).
 
 
@@ -261,17 +283,69 @@ Si se tiene alguna duda, se puede consultar el siguiente [enlacen](https://githu
 Como se puede ver en el archivo **Vagrantfile** hago uso de **ENV['NOMBRE-PRIMITIVA']**, esto se debe a que aprovecho la posibilidad que me da **Vagrant** de pasar parámetros al archivo para introducir los credenciales de **Amazon**. Las variables se introducen cuando creemos o destruyamos la instancia siguiendo la siguiente sintaxis:
 
 ```
-variable n=valor vagrant up/destroy --provider=aws
+var=valor vagrant up/destroy --provider=aws
 ----------------------------------------------------
 //Referencia en Vagrantfile
 
-ENV['n']
+ENV['var']
 
 ```
 
-**Nota**: en **--provider** estamos indicando el proveedor, en mi caso Amazon, si fuera azure deberíamos poner **azure**.
+En el caso de mi proyecto se debería poner:
+
+```
+// Para crear la instancia
+ sudo ACCESS_KEY_ID="valor" SECRET_ACCESS_KEY="valor" PRIVATE_KEY_PATH="valor" PRIVATE_KEY_NAME="valor" SECURITY-GROUPS="valor" vagrant up --provider=aws
+
+// Para destruir la instancia
+
+sudo ACCESS_KEY_ID="valor" SECRET_ACCESS_KEY="valor" PRIVATE_KEY_PATH="valor" PRIVATE_KEY_NAME="valor" SECURITY-GROUPS="valor" vagrant destroy
+
+```
+
+He proporcionado un archivo que nos permite descargarnos la aplicación y desplegarla en la carpeta **scritps**, en concreto se puede ver [aquí](https://github.com/lorenmanu/Tiendas/blob/master/scripts/deploy_EC2.sh). Para ejecutarlo se debería poner en la terminal lo siguiente(dentro del directorio donde este el archivo):
+
+```
+ sudo ACCESS_KEY_ID="valor" SECRET_ACCESS_KEY="valor" PRIVATE_KEY_PATH="valor" PRIVATE_KEY_NAME="valor" SECURITY-GROUPS="valor" ./desploy_EC2.sh
+
+```
+
+**Nota**: en **--provider** estamos indicando el proveedor, en mi caso Amazon, si fuera Azure deberíamos poner **azure**.
 
 
 - Finalmente nuestra aplicación estará desplegada:
 
 ![img21](https://www.dropbox.com/s/w6s217d4pld9o0j/img24.png?dl=1)
+
+**Nota**: el archivo **Vagranfile** y **.yml(ANSIBLE)** se encuentran en la carpeta VagrantIV del repositorio de la aplicación. Si queremos desplegarla deberemos realizar los pasos anteriormente descritos en este directorio de la aplicación(anteriormente descargada **git clone htttp...**). He proporcionado un **archivo** también por si se quiere desplegar sin hacer uso de **vagrant up --provider=aws**, en conreto usuando este archivo la sintaxis sería:
+
+```
+
+var=valor ./create_and_run.sh
+----------------------------------------------------
+//Referencia en Vagrantfile
+
+ENV['var']
+
+
+
+```
+
+
+----------
+
+### Referencias
+
+
+----------
+
+
+- Documentación oficial **AWS**: [ENLACE](https://aws.amazon.com/es/documentation/ec2/).
+
+- Uso de vagrant y ansible: ayudado por el enlace del profesor, y de un github en inglés:
+
+    - [Enlace profesor](https://twitter.com/jjmerelo/status/688335964947779584).
+    - [Github en inglés](https://github.com/mitchellh/vagrant-aws).
+
+- Uso de **CLI**: documentación oficial de Amazon.
+    - [ENLACE](http://docs.aws.amazon.com/cli/latest/reference/ec2/).
