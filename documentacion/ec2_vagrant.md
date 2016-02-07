@@ -148,11 +148,12 @@ keypair_name
 ```
 
 - La ruta a nuestro archivo **.pem**:
+
 ```
 
 private_key_path
 
-``
+```
 
  - El **security_groups** que se encargará de atender nuestras peticiones:
 
