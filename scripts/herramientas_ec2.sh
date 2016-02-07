@@ -2,7 +2,7 @@ echo " Instalación pip si no está instalado"
 curl -O https://bootstrap.pypa.io/get-pip.py
 sudo python27 get-pip.py
 echo "Instalación virtual-box"
-echo deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib | sudo tee /etc/apt/sources.list.d/virtualbox.list
+deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib | sudo tee /etc/apt/sources.list.d/virtualbox.list
 wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install virtualbox-4.0

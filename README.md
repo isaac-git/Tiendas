@@ -16,6 +16,10 @@ El proyecto consiste en una aplicación sencilla de Tiendas, la cual se pretende
 
 El proyecto se ha realizado usando Django, impartido en la asignatura de Desarrollo de Aplicaciones de Internet(DAI).
 
+Se encuentra inscrito en el [concurso de software libre](http://osl.ugr.es/bases-de-los-premios-a-proyectos-libres-de-la-ugr/).
+
+img[10](https://www.dropbox.com/s/ex2n0hmnk1ci7bb/img10.png?dl=1)
+
 ### Infraestructura en CLOUD
 
 Se ha realizado en la nube(cloud) la infraestructura necesaria para la aplicación. Para ello ha sido necesario la instalación de diferentes librerías y su provisionamiento. Se ha trabajado servidores web, bases de datos, y aplicación web donde interactúan varios usuarios.
@@ -33,7 +37,8 @@ Además del uso de este archivo se añade una serie de archivos, los cuales se e
 - [docker_install_and_run](https://github.com/lorenmanu/Tiendas/blob/master/scripts/docker_install_and_run.sh): descarga el docker de la aplicación y lo ejecuta.
 - [heroku_desploy.sh](https://github.com/lorenmanu/Tiendas/blob/master/scripts/heroku_deploy.sh): despliega la aplicación usando como **IAAS** heroku.
 - [run_app.sh](https://github.com/lorenmanu/Tiendas/blob/master/scripts/run_app.sh): ejecuta nuestra aplicación en el puerto **80**:
-- [herramientas_ec2](https://github.com/lorenmanu/Tiendas/blob/master/scripts/herramientas_ec2.sh): instala las herramientas necesarias para que nuestra aplicación se despliegue en ec2 usando **vagrant** y **ansible**.
+- [herramientas_ec2.sh](https://github.com/lorenmanu/Tiendas/blob/master/scripts/herramientas_ec2.sh): instala las herramientas necesarias para que nuestra aplicación se despliegue en ec2 usando **vagrant** y **ansible**.
+- [deploy_EC2.sh](https://github.com/lorenmanu/Tiendas/tree/master/scripts): descarga la aplicación y la despliega haciendo uso de vagrant y ansible.
 
 ### Ejecución local de la aplicación
 
@@ -83,7 +88,7 @@ Esta orden ejecutará los tests que indiquemos dentro de la carpeta de nuestra a
 ### Integracíon Continua
 Aquí he usado dos sistemas de integración continua, de esta manera cada vez que realice un cambio en la aplicación se comprobará su correcto funcionamiento ejecutando los tests. Los sistemas usados son:
 
-- **Travis**: estará sincronizado con nuestro repositorio, cada vez que se realice un cambio en la aplicación comprobará el correcto funcionamiento de esta. Para más información de como se usa
+- **Travis**: estará sincronizado con nuestro repositorio, cada vez que se realice un cambio en la aplicación comprobará el correcto funcionamiento de esta. Para mas información, pincha [aquí](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/travis.md).
 
 - **Snap-Ci**: usado para heroku, lo veremos en el siguiente apartado.
 
