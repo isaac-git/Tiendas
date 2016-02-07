@@ -9,7 +9,7 @@ sudo pip install fabric
 
 ```
 
-- ** Segundo **: Localizar nuestro archivo con la clave privada proporcionada por Amazon. Este archivo tendrá extensión **.pem** y Amazon nos permitirá su descarga cuando [creemos la instancia](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/ec2.md). Copiaremos la ruta a dicho archivo y lo añadiremos a la conexíon **ssh** con el siguiente comando:
+- **Segundo**: Localizar nuestro archivo con la clave privada proporcionada por Amazon. Este archivo tendrá extensión **.pem** y Amazon nos permitirá su descarga cuando [creemos la instancia](https://github.com/lorenmanu/Tiendas/blob/master/documentacion/ec2.md). Copiaremos la ruta a dicho archivo y lo añadiremos a la conexíon **ssh** con el siguiente comando:
 
 ```
 ssh-add "ruta archivo"
@@ -71,3 +71,7 @@ Con la opción **-p 80:80** estamos indicando que las peticiones que lleguen por
 
 ### Comprobación
 El enlace de mi app en ec2 de Amazon mediante automatización se puede ver [aquí](http://ec2-52-11-219-71.us-west-2.compute.amazonaws.com).
+
+### Aclaración
+
+Las imágenes mostradas en este apartado son antiguas, es decir, que se ha migrado la aplicación ha otra instancia **ec2** usando como herramienta de despliegue **vagrant** y **ansible**. Para más información se puede consultar el **README** de la aplicación. El motivo fundamental por el cual lo he hecho es porque **Amazon** solo permite tener como versión gratuita 750 horas al mes una solo instancia.
