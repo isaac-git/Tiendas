@@ -98,7 +98,7 @@ Los tests que se ejecutarán son los mencionados en el apartado **Testeo de la a
 
 Aquí he decidido usar Heroku, el cual se caracteriza por su fácil sincronización con github y por su caracter gratuito.
 
-Podemos ver la aplicación desplegada en el siguiente [enlace](https://myclient.herokuapp.com/).
+Podemos ver la aplicación desplegada en el siguiente [enlace](http://ec2-52-34-212-176.us-west-2.compute.amazonaws.com/tiendas/login/?next=/tiendas/).
 
 He proporcionado un archivo(script) para el despliegue en heroku, puede verse [aquí](https://github.com/lorenmanu/Tiendas/blob/master/scripts/heroku_deploy.sh).
 
